@@ -12,8 +12,8 @@ export function Note({onDelete}: NoteProps){
     const navigate = useNavigate()
 
     return <>
-        <Row className="aling-items-center mb-4">
-            <Col>
+        <Row className="aling-items-center mb-4" >
+            <Col Style={"margin-top: 50px; z-index: 1;"}>
                 <h1>{note.title}</h1>
                 {note.tags.length > 0 &&(
                     <Stack gap={1} direction="horizontal"
@@ -26,7 +26,7 @@ export function Note({onDelete}: NoteProps){
                     </Stack>
                 )}
             </Col>
-            <Col xs="auto">
+            <Col xs="auto" Style={"height:40px; z-index: 9999; position: absolute; right: 15.6%;"}>
                 <Stack gap={4} direction="horizontal">
                     <Link to={`/${note.id}/edit`}>
                         <Button variant="primary">Edit</Button>
